@@ -10,7 +10,7 @@ def get_connection():
     if prod_connection_string:
         # Estamos em produção (Render)
         return psycopg2.connect(prod_connection_string)
-    else:
+    else: 
         # Ambiente local
         return psycopg2.connect(
             host=os.getenv("DB_HOST", "localhost"),
