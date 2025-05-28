@@ -38,7 +38,7 @@ def inactivate_expired_forms():
 
                 # Inativar os formulários
                 cur.execute(update_query, (today,))
-                print(f"[{today}] Formulários inativados: {cur.rowcount}")
+                print(f"[{today}] Formulários inativados TESTEEEEE: {cur.rowcount}")
 
                 # Inserir logs
                 for form_id, client_id, form_name in forms_to_inactivate:
