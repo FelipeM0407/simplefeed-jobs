@@ -6,7 +6,7 @@ load_dotenv()  # Carrega .env se estiver em ambiente local
 
 def get_connection():
     prod_connection_string = os.getenv("CONNECTION_STRING_PROD")
-
+    print("teste")
     if prod_connection_string:
         # Estamos em produção (Render)
         return psycopg2.connect(prod_connection_string)
