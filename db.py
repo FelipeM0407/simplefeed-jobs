@@ -6,7 +6,6 @@ load_dotenv()  # Carrega .env se estiver em ambiente local
 
 def get_connection():
     prod_connection_string = os.getenv("CONNECTION_STRING_PROD")
-    print(f"[DEBUG] CONNECTION_STRING_PROD={os.getenv('CONNECTION_STRING_PROD')}")
 
     if prod_connection_string:
         # Estamos em produção (Render)
