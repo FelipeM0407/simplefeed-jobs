@@ -1,4 +1,5 @@
 from services.inactivate_forms import inactivate_expired_forms
+from services.billing_monthly_summary import generate_monthly_invoice_summary
 
 def run_daily_jobs():
     print("[INFO] Executando jobs diários...")
@@ -6,5 +7,5 @@ def run_daily_jobs():
 
 def run_monthly_jobs():
     print("[INFO] Executando jobs mensais...")
-    # Futuramente: importar e executar resumo de cobrança
-    pass
+    generate_monthly_invoice_summary()
+
