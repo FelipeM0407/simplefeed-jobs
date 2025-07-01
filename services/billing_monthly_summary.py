@@ -3,8 +3,12 @@ from datetime import date, datetime
 
 
 def generate_monthly_invoice_summary():
-    reference_date = date.today().replace(day=1)
-
+    today = date.today()
+    if today.month == 1:
+        reference_date = date(today.year - 1, 12, 1)
+    else:
+        reference_date = date(today.year, today.month - 1, 1)
+        
     query = """
         WITH
         forms_cobranca AS (
